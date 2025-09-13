@@ -1,0 +1,200 @@
+/* ==============================
+   TEI Poesía — hoja de estilo creativa
+   ============================== */
+
+:root{
+  --bg: #fcfbf7;
+  --fg: #232323;
+  --mute: #777;
+  --accent: #0f3a8a;
+  --rule: #b7b7b7;
+  --tone: #f0eee7;
+  --note-bg: #333;
+  --note-fg: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg: #121212;
+    --fg: #eaeaea;
+    --mute: #a0a0a0;
+    --accent: #8abbff;
+    --rule: #3a3a3a;
+    --tone: #1e1e1e;
+    --note-bg: #111;
+    --note-fg: #eaeaea;
+  }
+}
+
+html, body{
+  background: var(--bg);
+  color: var(--fg);
+}
+
+body{
+  font-family: "Garamond", "Georgia", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.page{
+  max-width: 72ch;
+  margin: 6vh auto 12vh auto;
+  padding: 0 1.2rem;
+}
+
+h1{
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.header-ornament{
+  display: block;
+  width: 160px;
+  height: 12px;
+  margin: 0.5rem auto 2rem auto;
+  background: var(--rule);
+  opacity: .35;
+  border-radius: 999px;
+}
+
+/* Contenedor TEI */
+#TEI{
+  background: var(--tone);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+}
+
+/* Estrofa */
+tei-lg{
+  display: block;
+  margin: 1.2rem 0 2rem 0;
+  padding: .5rem 0 .25rem 0;
+  border-left: 4px solid var(--rule);
+}
+
+/* Versos con numeración */
+tei-l{
+  display: block;
+  position: relative;
+  margin-left: 3.2rem;
+  padding-left: 1rem;
+  text-indent: -1rem;
+}
+
+tei-l::before{
+  content: attr(n);
+  position: absolute;
+  left: -3.2rem;
+  top: 0;
+  width: 2.6rem;
+  text-align: right;
+  color: var(--mute);
+  font-variant-numeric: tabular-nums;
+  font-size: .92rem;
+  line-height: 1.7;
+}
+
+/* Hemistiquios */
+tei-seg{
+  display: inline;
+}
+
+/* Cesura */
+tei-caesura{
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background: var(--rule);
+  margin: 0 .5ch;
+  transform: translateY(2px);
+  vertical-align: baseline;
+  opacity: .9;
+}
+
+/* Nombres propios */
+tei-persName{
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: .2px;
+}
+
+/* Abreviaturas */
+tei-choice{
+  position: relative;
+  color: inherit;
+}
+
+tei-abbr{
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+  cursor: help;
+  color: inherit;
+}
+
+tei-expan{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(.35rem);
+  background: var(--note-bg);
+  color: var(--note-fg);
+  border-radius: 8px;
+  font-size: .85rem;
+  line-height: 1.3;
+  padding: .35rem .5rem;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .18s ease, visibility .18s ease, transform .18s ease;
+  z-index: 20;
+}
+
+tei-expan::before{
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid var(--note-bg);
+}
+
+tei-choice:hover tei-expan,
+tei-abbr:hover + tei-expan{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(.15rem);
+}
+
+tei-pc{ display: inline; }
+
+tei-del{ text-decoration: line-through; color: #b30000; }
+tei-add{ text-decoration: underline; color: #0b7a0b; }
+
+@media (max-width: 600px){
+  .page{ margin: 3.5vh auto 8vh auto; }
+  #TEI{ padding: .85rem 1rem; }
+  tei-l{
+    margin-left: 2.6rem;
+    padding-left: .8rem;
+    text-indent: -.8rem;
+  }
+  tei-l::before{
+    left: -2.6rem;
+    width: 2.2rem;
+    font-size: .85rem;
+  }
+}
+
+@media print{
+  body{ background: #fff; color: #000; }
+  #TEI{ border: none; background: transparent; }
+  tei-lg{ border-left-color: #aaa; }
+}
