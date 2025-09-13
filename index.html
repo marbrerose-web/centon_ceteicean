@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Centón de Alonso Ramírez de Vargas</title>
+  <link rel="stylesheet" href="css/tei.css">
+  <script src="js/CETEI.js"></script>
+</head>
+<body>
+  <h1>Centón (c. 1682) - Alonso Ramírez de Vargas</h1>
+  <div id="TEI"></div>
+
+  <script>
+    let CETEIcean = new CETEI();
+    CETEIcean.getHTML5("SacristanC_S12_centon.xml", function(data){
+      document.getElementById("TEI").appendChild(data);
+    });
+  </script>
+</body>
+</html>

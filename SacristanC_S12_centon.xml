@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="es">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Centón (c. 1682)</title>
+            <author>Alonso Ramírez de Vargas</author>
+            <respStmt>
+               <resp>Codificación TEI</resp>
+               <name>Carolina Sacristán Ramírez</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Ejercicio</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Transcripción parcial normalizada (estrofa 1, vv. 1–17) 
+               de un centón atribuido a Alonso Ramírez de Vargas
+               (c.1682).</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   
+   <text>
+      <body>
+         <lg n="1">
+            <l n="1">
+               <seg>Con naval pompa</seg>
+               <caesura/><seg>de inquieto lino
+               </seg>
+            </l>
+            
+            <l n="2">
+               <seg>(velero 
+                  <choice>
+                     <abbr>bosqu</abbr>
+                     <expan>bosque</expan>
+                  </choice>
+                  </seg>
+               <caesura/>
+               <seg>
+                  <choice>
+                     <abbr>au</abbr>
+                     <expan>aún</expan>
+                  </choice>
+                  <choice>
+                     <abbr>cotra</abbr>
+                     <expan>contra</expan>
+                  </choice> el 
+                  <choice>
+                     <abbr>vieto</abbr>
+                     <expan>viento</expan>
+                      
+                  </choice>
+                  armado)
+               </seg>
+            </l>
+            
+            <l n="3">
+               <seg>la proa diligente</seg>
+               <caesura/><seg>en poca arena</seg>
+            </l>
+            
+            <l n="4">
+               <seg>no solo dirigió</seg>
+               <caesura/><seg>descaminado</seg>
+            </l>
+            
+            <l n="5">
+               <seg>el príncipe troyano</seg>
+               <caesura/><seg>peregrino;
+               </seg>
+            </l>
+            
+            <l n="6">
+               <seg>mas redújola</seg>
+               <caesura/><seg>entre una y otra almena
+               </seg>
+            </l>
+            
+            <l n="7">
+               <seg>tocó las playas, mas</seg>
+               <caesura/><seg>fue de su pena
+               </seg>
+            </l>
+            
+            <l n="8">
+               <seg>término luminoso:</seg>
+            </l>
+            
+            <l n="9">
+               <seg>que fuego es expirando</seg>
+               <caesura/><seg>afectuoso,
+               </seg>
+            </l>
+            
+            <l n="10">
+               <seg>de los campos apenas</seg>
+               <caesura/><seg>ha ofrecido
+               </seg>
+            </l>
+            
+            <l n="11">
+               <seg>do halló reparo</seg>
+               <caesura/><seg>agradecidamente
+               </seg>
+            </l>
+            
+            <l n="12">
+               <seg>cuando de amor</seg><caesura/>
+               <seg>admira reverente
+               </seg>
+            </l>
+            
+            <l n="13">
+               <seg>deidad que en isla</seg>
+               <caesura/><seg>se venera culta
+               </seg>
+            </l>
+            
+            <l n="14">
+               <seg>triunfando</seg>
+               <caesura/><seg>de el agua, que la oculta
+               </seg>
+            </l>
+            
+            <l n="15">
+               <seg>aun contra el</seg>
+               <caesura/><seg><persName>Orión</persName> 
+                  humedecido;</seg>
+            </l>
+            
+            <l n="16">
+               <seg>que ser quiso en</seg>
+               <caesura/><seg>el mar sin cobardía
+               </seg>
+            </l>
+            
+            <l n="17">
+               <seg>al frigio, muro,</seg>
+               <caesura/><seg>y resistencia al día.
+               </seg>
+            </l>
+         </lg>
+      </body>
+   </text>
+</TEI>
